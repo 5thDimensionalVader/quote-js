@@ -1,0 +1,17 @@
+{
+  "name": "quotes",
+  "version": "1.0.0",
+  "description": "This is a simple implementation of an API with Quotes",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Chinye",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "moment": "^2.29.1",
+    "prompt-sync": "^4.2.0"
+  }
+}
