@@ -5,15 +5,14 @@ const prompt = require('prompt-sync')({
   sigint: true
 });
 
-// set the baseURL
-const baseURL = 'https://zenquotes.io/api/';
-
 const inputEnd = prompt('Hello, enter any of the following [random, today & quotes]: ');
+// set the baseURL
+const baseURL = `https://zenquotes.io/api/${inputEnd}`;
 // create the date using the Moment package
 if (inputEnd === 'RANDOM' || inputEnd === 'TODAY' || inputEnd === 'QUOTES' || inputEnd === 'QUOTE' || inputEnd === 'quote') {
   console.log(`Invalid input => ${inputEnd}.`);
 } else {
-  axios.get(baseURL + inputEnd)
+  axios.get(baseURL)
     .then((res) => {
       const dateMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
       res.data.forEach((quote, index) => {
