@@ -13,7 +13,10 @@ const baseURL = `https://zenquotes.io/api/${inputEnd}`;
 axios.get(baseURL)
   .then((res) => {
     // const dateMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
-    console.log(res.data.map(quote => quote.a))
+    const response = res.data; // Getting response from API.
+    const quote_authors = response.map(quote => quote.a.toUpperCase());
+
+    console.log(quote_authors);
     // res.data.forEach((quote, index) => {
     //   console.log(`\n
     //     Author: ${quote.a}\n
