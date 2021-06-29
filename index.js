@@ -15,8 +15,10 @@ axios.get(baseURL)
     // const dateMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
     const response = res.data; // Getting response from API.
     const quote_authors = response.map(quote => quote.a.toUpperCase());
+    const htmlP = response.map(tag => tag.h);
 
-    console.log(quote_authors);
+    // console.log(quote_authors);
+    console.log(htmlP);
     // res.data.forEach((quote, index) => {
     //   console.log(`\n
     //     Author: ${quote.a}\n
